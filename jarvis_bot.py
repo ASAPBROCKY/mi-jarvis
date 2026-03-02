@@ -86,7 +86,7 @@ async def ask_jarvis(user_id: int, user_message: str) -> str:
     add_to_history(user_id, "user", user_message)
     
     response = anthropic_client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-haiku-4-5-20251001",
         max_tokens=2048,
         system=JARVIS_PERSONALITY,
         messages=get_history(user_id),
